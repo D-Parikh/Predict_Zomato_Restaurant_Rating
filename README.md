@@ -1,8 +1,12 @@
 #  End-To-End Deployment of Zomato Restaurant Ratings
 
-### Main Agenda of this Project is 
 
 Predicting the Zomato Restaurant's Rating based on features like what kind of food people eat, Location of the restaurant, Approx Price of food, Theme based restaurant or not, Is a particular neighborhood famous for its own kind of food, Which locality of that city serves that cuisines with maximum number of restaurants
+
+
+<br>
+
+### Main Agenda of this Project is 
 
 Perform Extensive Exploratory Data Analysis on the Zomato Dataset
 
