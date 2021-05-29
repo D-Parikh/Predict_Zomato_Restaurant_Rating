@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ratings</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<style> 
+    body{
+        background-image: url('https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+        background-size: cover;
+    }
+</style>
+<body>
+    <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/news14109.jpg"
+         alt="zomato image", width="230", height="100", style="float:left">
+
+    <div>
+        <h1 style="color: white;">Predict Zomato Restaurant Ratings</h1>
+    
+        <!-- Main input for receiving our Query to our ML -->
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input type="text" name="Online Order" placeholder="Onlne Order" required="required" />
+            <input type="text" name="Book Table" placeholder="Book Table" required />
+            <input type="text" name="Votes" placeholder="Votes" required />
+            <input type="text" name="Location" placeholder="Location" required />
+            <input type="text" name="Restaurant" placeholder="Restaurant" required/>
+            <input type="text" name="Cuisines" placeholder="Cuisines" required />
+            <input type="text" name="Cost" placeholder="Cost" required="required" />
+            <input type="text" name="Menu Item" placeholder="Menu Item" required />
+    
+            <button type="submit" class="button">Predict</button>
+        </form>
+        <p class="predicted" style="color: black;">{{ prediction_text }}</p>
+    </div>
+</body>
+</html>
